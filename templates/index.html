@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=”ja”>
+<head>
+    <meta charset=”UTF-8″>
+    <title>画像分類アプリケーション</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1{
+            color: #333;
+        }
+        #image-display{
+            margin-top: 20px;
+        }
+        img{
+            max-width: 100%;
+        }
+        #classification-result{
+            margin-top: 20px;
+            font-size: 18px;
+            color: #0078d4;
+        }
+    </style>
+</head>
+<body>
+    <h1>画像を判定しよう！</h1>
+    <form method = post enctype = multipart/form-data>
+        <input type=file name=file>
+        <input type=submit value=Upload>
+    </form>
+
+    <font color="black"><h2>アップロード画像</h2><font></span>
+    <div class="image-display"> 
+    <img src={{image}} alt="写真" width="200" height="200">
+    </div>
+
+    <font color="black"><h3>画像判定結果</h3></font>
+    <div class="classification-result"></div>
+    <p style="color:black">{{label}}</p>
+    <p style="color:black">{{output}}</p>
+    </div>
+</body>
+</html>
